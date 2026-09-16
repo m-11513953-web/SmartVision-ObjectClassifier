@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartVision - Object Classifier</title>
+    <!-- Membaca style.css dalam folder yang sama -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <!-- Load TensorFlow.js dan Teachable Machine Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SMART OBJECT AI</h1>
+            <p>Pengesan Objek Automatik - SmartVision Sdn. Bhd.</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <button id="webcam-btn" onclick="startCamera()">START CAMERA</button>
+                <div class="file-upload">
+                    <label for="imageUpload" class="upload-btn">UPLOAD IMAGE</label>
+                    <input type="file" id="imageUpload" accept="image/*">
+                </div>
+            </div>
+
+            <div class="display-section">
+                <div id="webcam-container"></div>
+                <img id="image-preview" src="#" alt="Preview" style="display:none;">
+            </div>
+
+            <div class="result-card">
+                <h3>KEPUTUSAN RAMALAN</h3>
+                <div class="result-item">
+                    <span class="label">Objek:</span>
+                    <span id="prediction" class="value">-</span>
+                </div>
+                <div class="result-item">
+                    <span class="label">Confidence:</span>
+                    <span id="confidence" class="value">0%</span>
+                </div>
+                <div class="result-item">
+                    <span id="source-label" class="source">Sumber: -</span>
+                </div>
+                <div class="progress-bar-bg">
+                    <div id="progress-bar"></div>
+                </div>
+                <button class="reset-btn" onclick="resetApp()">RESET</button>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
