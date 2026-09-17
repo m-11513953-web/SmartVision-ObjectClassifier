@@ -1,4 +1,4 @@
-# 🔍 SmartVision — Object Classifier
+# 🔍 SmartVision — Object Classifier!
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?logo=fastapi&logoColor=white)
